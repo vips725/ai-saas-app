@@ -5,6 +5,7 @@ dotenv.config();
 import { clerkMiddleware, requireAuth } from '@clerk/express'
 import aiRouter from './routes/aiRoutes.js'
 import connectCloudinary from './configs/cloudinary.js';
+import userRouter from './routes/userRoute.js';
 
 const app = express()
 
@@ -19,7 +20,9 @@ app.get('/', (req,res)=>res.send('server is live'))  //when we hit the route thi
 // home route hai public hai anyine can excess it
 
 app.use(requireAuth())
+
 app.use('/api/ai',aiRouter)
+app.use('/api/user',userRouter)
 
 const PORT = process.env.PORT || 3000;
 
