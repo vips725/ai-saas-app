@@ -24,7 +24,6 @@ const WriteArticle = () => {
 
  const {getToken} = useAuth()
 
- 
  const onSubmitHandler = async(e)=>{
    e.preventDefault();
    try {

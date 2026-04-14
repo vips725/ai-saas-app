@@ -9,14 +9,9 @@ import RemoveObject from './pages/RemoveObject'
 import RemoveBackground from './pages/RemoveBackground'
 import ReviewResume from './pages/ReviewResume'
 import Community from './pages/Community'
-import { useAuth } from '@clerk/react'
-import { useEffect } from 'react'
 import {Toaster} from 'react-hot-toast'
 
 const App = () => {
-
-
-
   return (
     <div>
       <Toaster/>
@@ -36,5 +31,4 @@ const App = () => {
     </div>
   )
 }
-
 export default App
